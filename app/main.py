@@ -1,7 +1,7 @@
 class Person:
     people = {}
 
-    def __init__(self, name: str, age: int) -> None:  # Добавили return type annotation -> None
+    def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
         Person.people[name] = self
@@ -24,4 +24,3 @@ def create_person_list(people_data: list[dict]) -> list[Person]:
             person.husband = Person.people[person_data["husband"]]
 
     return person_instances
-
